@@ -1,44 +1,57 @@
-function cipher(){
-function inicio() {
-  document.getElementById("mensaje").addEventListener("keyup",function(){
-    this.value=this.value.toUppercase();
-  },true); 
-  document.getElementById("cifrar").addEventListener("click",function(){
-    let texto=document.getElementById("mensaje").value;
-    let desplazamiento = document.getElementById("desplazamiento").value;
-    document.getElementById("mensaje2").value = cifrar(texto,desplazamiento);
-  },true);
-  document.getElementById("descifrar").addEventListener("click",function(){
-    let texto=document.getElementById("mensaje").value;
-    let desplazamiento = document.getElementById("desplazamiento").value;
-    document.getElementById("mensaje2").value = descifrar(texto,desplazamiento);
-  },true);
 
+ const cipher = {
 
-  // ...
-};
-
-
-function cifrado(texto,desplazamiento){
-  let resultado ="";
-  let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   
-  desplazamiento=(desplazamiento%26+26)%26;
-  if(texto){
-    for (let i=0; i<texto.length; i++){
-      if(letras.indexOf(texto[i])!=-1){
-        let posicion =((lestras.indexOf(texto[i])+desplazamiento)%26);
-        resultado +=letras[posicion];   
+  encode: function (desplazamientos,mensaje) {
+  const letras= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //cadena de letras para usar el index of 
+  let cadenavacia=[]
+  let resultado=[]
+  desplazamientos=(desplazamientos%26+26)%26; //modulo 2 veces el resultado le sumaos 26 asegurando que si es negativo quede positivo 
+                                                   //y al hacer modulo estara seguro que sera entre 0 y 25
+  if(mensaje){    // si hay texto  se empieza a recorrer la cadena  y se empiezan a rotar con for 
+    for (let i=0; i<mensaje.length; i++){  //
+      if(letras.indexOf(mensaje[i])!=-1){  //comporbando que la letra este en la cadena (array), si es otro no lo va encontrar 
+                                              //y lo dejara asi porque ondexof dvuelve -1 si no lo encuentra
+        let posicion =((letras.indexOf(mensaje[i])+desplazamientos)%26); //gurada la letra la posicion de la letra y se hace el claculo del desplzamiento 
+      
+        let resultado =letras[posicion];   // agregamos el valor de posicion a la variable de resultado 
+      
+        cadenavacia.push (resultado);
       }
-    else
-        resultado += texto[i];
-   }    
+      else {
+        resultado = mensaje[i];//si no es letra devuve lo que esta como numeros simbolos
+        //console.log (cadenavacia)
+        } 
+    }
+    return cadenavacia.join('');
   }
-    return resultado;
-}
+ 
+},
+
+
+
+
+DEcode: function (desplazamientos,mensaje) {
+  const letras= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //cadena de letras para usar el index of 
+  let cadenavacia=[]
+  desplazamientos=(desplazamientos%26-26)%26; //modulo 2 veces el resultado le sumaos 26 asegurando que si es negativo quede positivo 
+                                                   //y al hacer modulo estara seguro que sera entre 0 y 25
+  if(mensaje){    // si hay texto  se empieza a recorrer la cadena  y se empiezan a rotar con for 
+    for (let i=0; i<mensaje.length; i++){  //
+      if(letras.indexOf(mensaje[i])!=-1){  //comporbando que la letra este en la cadena (array), si es otro no lo va encontrar 
+                                              //y lo dejara asi porque ondexof dvuelve -1 si no lo encuentra
+        let posicion =((letras.indexOf(mensaje[i])-desplazamientos)%26); //gurada la letra la posicion de la letra y se hace el claculo del desplzamiento 
+        
+        let resultado =letras[posicion];   // agregamos el valor de posicion a la variable de resultado 
+        cadenavacia.push (resultado);
+      }
+      else {
+        resultado = mensaje[i];//si no es letra devuve lo que esta como numeros simbolos
+        } 
+    }
+    return cadenavacia.join('');
     
-}
-
-
-
+  }
+},
+};
 export default cipher;

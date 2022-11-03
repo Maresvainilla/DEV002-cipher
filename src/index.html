@@ -5,20 +5,47 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
+  
   <body>
-    <div id="root">
-      <h1>cifrado cesar  </h1>
-      <p>ingresa tu texto y el numero de desplazamientos en el abecedario</p>
-      <h3>INGRESA TU MENSAJE :</h3>
-      <P><input type="text" id="mensaje"/></P>
-      <h3>ingresa numero de desplazamientos:</h3>
-      <p><input type="number" id="desplazamiento" size="4"/></p>
-      <p><button type="button" id="descifrar">Descifrar</button>
-      <button name= "button" id="cifrar" >cifrar</button></p>
-      <p><H3>TU MENSAJE QUEDA ASI :</H3></p>
-      <p><input type="text" id="mensaje2"></p>
+      <!-- Bienvenida -->
+      <div class="bienvenidS">
+      <h1> TE DAMOS LA BIENVENIDA A MENSAJERO ENCODE</h1>
+      <h2 class="subtitle">MANDA MENSAJES SERETOS A TU TEAM...¡USANDO EL CIFRADOR! </h2>
+      </div>
+       
+        
+       
+    <!-- instrucciones  --> 
+    <section class="instrucciones">
+    <p >ESCRIBE tu mensaje EN MAYUSCULAS 
+    <p >DECIDE  numero de DESPLAZAMIENTOS </p>
+    <p >usa --ENCODE--  para hacer secreto tu mensaje</p>
+    <p >usa --DECODE-- para traducir el mensaje que te han enviado</p>
+    <p >RECUERDA: el numero de desplazaientos debe ser el mismo en ambos casos </p>
+    </section>
 
-    </div>
-    <script src="index.js" type="module"></script>
+    <!-- cifrador  --> 
+          
+  
+    <P>ESCRIBE TU MENSAJE</P>
+    <label for="mensaje">Mensaje:</label><input type= "text" class="mensaje" id="mensaje" /> 
+    <P>ESCRIBE numero de desplazamientos</P>
+    <label for="desplazamientos">desplazamientos:</label><input type="number"class="desplazamientos" id="desplazamientos" size="4"/>
+    <button class="btnENcode" id="btnENcode">--ENCODE--</button> 
+    <button class="btnDEcode" id="btnDEcode">--DECODE--</button> 
+  
+    <P>aqui esta tu mensaje :</P>
+    <label for="mensaje2"class="etiquetaresultado">resultado:</label>
+    <textarea type= "text" class="estilotextarea" id="mensaje2" rows="10" cols="50"></textarea>/>  
+    <p type= "text" id="RESULTADO2" ></p>
+    
+
+        
+
+
+
+
+  <script src="index.js"  type="module"></script> 
   </body>
 </html>
