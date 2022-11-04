@@ -31,7 +31,7 @@ botonE.addEventListener("click",function(){
     }
 })
 
-
+//decode
 botonD.addEventListener("click",function(){
     let clave=desplazamientos.value
     let texto=cajaM.value
@@ -43,11 +43,11 @@ botonD.addEventListener("click",function(){
         alert("aun no escribes tu mensaje")
     }
     else{ 
-    let texto2= cipher.DEcode(clave,texto)
+    let texto2= cipher.decode(clave,texto)
  
     RESULTADO2.innerHTML=texto2
 
-    cajaM2.innerHTML= cipher.DEcode(clave,texto)
+    cajaM2.innerHTML= cipher.decode(clave,texto)
  
        
     }

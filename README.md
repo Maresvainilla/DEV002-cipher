@@ -13,7 +13,7 @@ el cuadro de escribir mensaje .
 
 
 
-**2**.los usuarios **p**ara esta intefaz serian jugaderos de diferentes plataformas y usuarios en genral de videojuegos en equipo y online
+**2**.los usuario para esta intefaz serian jugaderos de diferentes plataformas y usuarios en genral de videojuegos en equipo y online
 especialmente para quienes juegan en modo estretagia. 
 lo utilizaran los jugadores para que puedan mandar mensajes atravez de un codigo o cifrado seguro , sin que
  el equipo (team) contrario escuche o lea su conversacon o la entienda.
