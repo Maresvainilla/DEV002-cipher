@@ -16,7 +16,6 @@ body{
   
     font-family: "Trebuchet MS", Verdana, sans-serif;
     -webkit-text-fill-color: rgb(252, 248, 248);
-    -webkit-background-clip: text;
     box-shadow: inset 0px 0px 0px 0px #4c3f37;
     color: #ff17A2;
     font-size:1rem;
