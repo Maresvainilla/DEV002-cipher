@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  
+  <body>
+      <!-- Bienvenida -->
+      <div class="bienvenidS">
+      <h1> TE DAMOS LA BIENVENIDA A MENSAJERO ENCODE</h1>
+      <h2 class="subtitle">MANDA MENSAJES SERETOS A TU TEAM...¡USANDO EL CIFRADOR! </h2>
+      </div>
+       
+        
+       
+    <!-- instrucciones  --> 
+    <section class="instrucciones">
+    <p >ESCRIBE tu mensaje EN MAYUSCULAS </p>
+    <p >DECIDE  numero de DESPLAZAMIENTOS </p>
+    <p >usa --ENCODE--  para hacer secreto tu mensaje</p>
+    <p >usa --DECODE-- para traducir el mensaje que te han enviado</p>
+    <p >RECUERDA: el numero de desplazaientos debe ser el mismo en ambos casos </p>
+    </section>
+
+    <!-- cifrador  --> 
+          
+  
+    <p>ESCRIBE TU MENSAJE</p>
+    <label for="mensaje">Mensaje:</label><input type= "text" class="mensaje" id="mensaje" /> 
+    <p>ESCRIBE numero de desplazamientos</p>
+    <label for="desplazamientos">desplazamientos:</label>
+    <input type="number" class="desplazamientos" id="desplazamientos" size="4" />
+   
+    <button class="btnENcode" id="btnENcode">--ENCODE--</button> 
+    <button class="btnDEcode" id="btnDEcode">--DECODE--</button> 
+  
+    <p>aqui esta tu mensaje </p>
+    <label>resultado</label>  
+    <textarea type= "text" class="estilotextarea" id="mensaje2" rows="5" cols="30"></textarea>  
+    <p type= "text" id="RESULTADO2" ></p>
+    
+
+        
+
+
+
+
+  <script src="index.js"  type="module"></script> 
+  </body>
+</html>
