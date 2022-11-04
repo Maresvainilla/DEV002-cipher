@@ -6,8 +6,7 @@ y enviarse estrategias sin que otros usurios sepan .
 
 se hizo un diseño en papel , pensando en un titulo y una imagen de control de consola para agregar los botones de encode y decode asi como
 el cuadro de escribir mensaje .
-     #  
-      imagen 
+   
 
 
 
@@ -26,5 +25,6 @@ lo utilizaran los jugadores para que puedan mandar mensajes atravez de un codigo
   en el recuadro y le da click en el boton de  decode  y podr saber lo que su compañero de ha enviado .
 
 4** captura de las pruebas unitarias
-![ssPRUEBASUNITARIAS](https://user-images.githubusercontent.com/114552201/200027621-c96dbfc3-0943-44d3-8952-409cb51f89fb.png)
+
+![ssPRUEBASUNITARIAS](https://user-images.githubusercontent.com/114552201/200028030-f18950f4-db08-4f08-a42d-d999dfacc675.png)
 
